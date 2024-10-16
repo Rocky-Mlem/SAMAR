@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./DEMO1.CSS">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- thuộc tính của form action: sẽ điền url của trang nhận thông tin , dữ liệu tù form .thuộc tính của form còn có method= "get" với "post" -->
+    <!-- GET: trong thẻ input nếu có điền nội dung vào thuộc tính "name" thì sau khi ta nhập dữ liệu trong form thì tất cả dữ liệu đều sẽ show lên URL(dùng cho khách hàng ko cần bảo mật)
+     POST: sẽ ko có show , chuyển đi ngầm (bảo mật cao nên dùng cho các khách hàng cần độ bảo mật) -->
+    <form action="" method="get">
+        <!-- <label for="NAME">Name</label> -->
+        <!-- placeholder dùng để gợi ý nội dung tron form  -->
+        <!-- có thuộc tính maxlength giới hạn ký tự -->
+        <input type="text" id="NAME" placeholder="Name" maxlength="20">
+        <!-- value xem như mã khách hàng - đi kèm với readonly và disabled(ko thể sữa nội dung đã điền sẵn trong form) -->
+        <input type="text" value="MKH01" readonly>
+        <!-- thẻ số không điền đc text vào form , không nên dùng cho số điện thoại  -->
+        <!-- có thuộc tính min-max -->
+        <input type="number" name="" id="" placeholder="Number" min="1" max="5">
+        <!-- email -->
+        <input type="email" name="" id="" placeholder="Email" required>
+        <!-- Password -->
+        <input type="password" name="" id="" placeholder="Password">
+        <!-- ĐỊA CHỈ -->
+        <input type="text" placeholder="Address" required>
+        <!-- Nên dùng text và tel cho số đt , ko dùg number  -->
+        <input type="tel">
+        <!-- dùng cho ngày tháng   -->
+        <input type="date" name="" id="">
+        <!-- dùng cho File -->
+        <input type="file" name="" id="">
+        <!-- TYPE là submit thì sẽ load lại trang -->
+        <button type="submit">Submit</button>
+        <input type="button" value="Button">
+        <!-- <button type="submit">Submit</button> -->
+        <input type="reset" value="Reset">
+
+        <textarea name="" id="" cols="30" rows="10" placeholder="comment"></textarea>
+        <!-- CHỌN NHIỀU LỰA CHỢN THÌ SỬ DỤNG multiple -->
+        <!-- DROP DOWN -->
+        <select name="" id="" multiple>
+            <option value="">Chose your bike</option>
+            <option value="">BMW</option>
+            <option value="">Honda</option>
+        </select>
+        <!-- COMBO BOX INPUT ĐI CHUNG VỚI LABEL , ID CỦA INPUT PHẢI GIỐNG VỚI FOR CỦA LABEL -->
+        <input type="checkbox" name="môn học" id="Toán" value="Toán">
+        <label for="Toán">Toán</label>
+        <input type="checkbox" name="môn học" id="Lý" value="Lý">
+        <label for="Lý">Lý</label>
+        <input type="checkbox" name="môn học" id="Hóa" value="Hóa">
+        <label for="Hóa">Hóa</label>
+
+        <br>
+        <!-- MỘT LỰA CHỌN THÌ CHỌN RADIO  -->
+        <input type="radio" name="môn học" id="Toán" value="Toán">
+        <label for="Toán">Toán</label>
+        <input type="radio" name="môn học" id="Lý" value="Lý">
+        <label for="Lý">Lý</label>
+        <input type="radio" name="môn học" id="Hóa" value="Hóa">
+        <label for="Hóa">Hóa</label>
+        <br>
+        <!-- gom nhóm  -->
+        <!-- chọn thẻ <fieldset></fieldset> tiêu đề chọn <legend></legend> -->
+        <!-- nội dung <input> -->
+        <fieldset>
+            <legend>Thông tin cá nhân </legend>
+            <div class="INF">
+                <input type="text" placeholder="Họ và tên">
+                <input type="text" placeholder="Nguyên Quán">
+                <input type="date" placeholder="Ngày sinh">
+                <input type="text" placeholder="Địa chỉ">
+                <input type="tel" placeholder="Số đt">
+                <input type="number" placeholder="CMND-Căn Cước">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
